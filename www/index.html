@@ -1,0 +1,116 @@
+
+<html>
+	<head>
+<meta charset="utf-8">
+<title>React asdTape</title>
+<script type="text/javascript" src="snabbt.js"></script>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/snabbt.js/0.5.8/snabbt.min.js"></script>
+
+
+
+<!--meteor-config-->
+
+
+<script type="text/javascript">__meteor_runtime_config__ = JSON.parse(decodeURIComponent("%7B%22meteorRelease%22%3A%22METEOR%401.2.1%22%2C%22PUBLIC_SETTINGS%22%3A%7B%7D%2C%22ROOT_URL%22%3A%22http%3A%2F%2F192.168.99.100%2Fmeteor%22%2C%22ROOT_URL_PATH_PREFIX%22%3A%22%2Fmeteor%22%2C%22appId%22%3A%22jo9m301q0hanw1lxznsq%22%2C%22autoupdateVersion%22%3A%225cd78999ae9be7055ea326862a80154346ef41c1%22%2C%22autoupdateVersionRefreshable%22%3A%22b570b53079f4a15a7be94027fceab5940e92e870%22%2C%22autoupdateVersionCordova%22%3A%22none%22%7D"));</script>
+
+  <script type="text/javascript" src="/meteor/packages/es5-shim.js?03b82f907286b5353e3a371eb320635a634fc88b"></script>
+  <script type="text/javascript" src="/meteor/packages/underscore.js?fa590de5090ceb4a42555b48562fd8f8e7035758"></script>
+  <script type="text/javascript" src="/meteor/packages/meteor.js?9730f4ff059088b3f7f14c0672d155218a1802d4"></script>
+  <script type="text/javascript" src="/meteor/packages/meteor-base.js?f0836ed3757e6217fff6e2710a1293407a6d9b09"></script>
+  <script type="text/javascript" src="/meteor/packages/mobile-experience.js?674f55574f9947b91bb5f92f9ea9be098479b649"></script>
+  <script type="text/javascript" src="/meteor/packages/base64.js?52d94e9ee54ea51e35e9d410040454b9d9f9136a"></script>
+  <script type="text/javascript" src="/meteor/packages/ejson.js?6b2a6aad82b5a8eb6d5f26975783b243b6df124a"></script>
+  <script type="text/javascript" src="/meteor/packages/check.js?9c4972d3f4fe56cd455d3022e70b5195e642fc41"></script>
+  <script type="text/javascript" src="/meteor/packages/babel-compiler.js?b72b25550ee1619b0eaddf5e0c1541e8c264ccf0"></script>
+  <script type="text/javascript" src="/meteor/packages/ecmascript.js?9c79b20dd3f3a6da85828defdd8585b8436af75d"></script>
+  <script type="text/javascript" src="/meteor/packages/babel-runtime.js?2b4e3aad8a693643f77952e1b8431f625bca2038"></script>
+  <script type="text/javascript" src="/meteor/packages/ecmascript-runtime.js?d552d50ef9d63d143f8f549245241748a4796cec"></script>
+  <script type="text/javascript" src="/meteor/packages/promise.js?c18eac25a2117745aa5b372e139bae2fce4a84fe"></script>
+  <script type="text/javascript" src="/meteor/packages/random.js?5851416a296763029b1a4d7302fb9dc24aba51d2"></script>
+  <script type="text/javascript" src="/meteor/packages/id-map.js?7ca7d36e6fea2952e28bf48090ce1c5c110df912"></script>
+  <script type="text/javascript" src="/meteor/packages/ordered-dict.js?2628d5d93b3386b11f2d072e1d70ea9644a0652a"></script>
+  <script type="text/javascript" src="/meteor/packages/tracker.js?7776276660c988c38fed448d8262b925dffb5bc3"></script>
+  <script type="text/javascript" src="/meteor/packages/mongo-id.js?86be8beb10a566185e04cb56b189a091ab8773c6"></script>
+  <script type="text/javascript" src="/meteor/packages/diff-sequence.js?693d4e99cb4a8884bd58c0da70e580fcf7fec2f0"></script>
+  <script type="text/javascript" src="/meteor/packages/geojson-utils.js?83d13d8f6fd1847ed97e71e73e2f55dc9165dadf"></script>
+  <script type="text/javascript" src="/meteor/packages/minimongo.js?cdf1a26cf7719fa9471a8017c3defd5aea812727"></script>
+  <script type="text/javascript" src="/meteor/packages/retry.js?cf00021132d94e73a330886b24df2373a3b209ab"></script>
+  <script type="text/javascript" src="/meteor/packages/ddp-common.js?5bfbe93c6ad5580f8d13f28d81b2c0db0dae13c4"></script>
+  <script type="text/javascript" src="/meteor/packages/reload.js?4afcce286a1d3526c99dff17696bd42e70150db1"></script>
+  <script type="text/javascript" src="/meteor/packages/ddp-client.js?82da06d8e1ea6342d823b2c5c3be071e96108c70"></script>
+  <script type="text/javascript" src="/meteor/packages/ddp.js?1c935134013739ed5ece46880dea800b6319bd67"></script>
+  <script type="text/javascript" src="/meteor/packages/ddp-server.js?1057b33d71942bc01fd0167e2b2a5f49f5545d11"></script>
+  <script type="text/javascript" src="/meteor/packages/mongo.js?69942a86515ec397dfd8cbb0a151a0eefdd9560d"></script>
+  <script type="text/javascript" src="/meteor/packages/blaze-html-templates.js?31453f3129c01ec6fabaa5b791f6572e8c4464a2"></script>
+  <script type="text/javascript" src="/meteor/packages/reactive-dict.js?8210a4b2fa52dbde9b3c8cf6b296192a34d7b899"></script>
+  <script type="text/javascript" src="/meteor/packages/session.js?0ae88e5e9f7b50b0047ade23a47a1a8dfa5874b9"></script>
+  <script type="text/javascript" src="/meteor/packages/jquery.js?bd30605bc9f8429d01bae2d29081902d10a6c400"></script>
+  <script type="text/javascript" src="/meteor/packages/standard-minifiers.js?b02a7937678c6058031ee7b2f45b5a617518335d"></script>
+  <script type="text/javascript" src="/meteor/packages/npm-bcrypt.js?339fbff12a6703226e44b2e1f9d42612d7f2d1e1"></script>
+  <script type="text/javascript" src="/meteor/packages/rate-limit.js?45f3c9755c8caa7e286d776da7d38d2723d8a834"></script>
+  <script type="text/javascript" src="/meteor/packages/ddp-rate-limiter.js?99cc132315210729c319595579da54a2d316b59e"></script>
+  <script type="text/javascript" src="/meteor/packages/localstorage.js?ec69fda4c2b4c17a956e7b53981e95b8e324ea5e"></script>
+  <script type="text/javascript" src="/meteor/packages/callback-hook.js?38d295331b62cd8901a599409d1f3c7749a51db4"></script>
+  <script type="text/javascript" src="/meteor/packages/deps.js?a0f1fc18309813a3aac8954f76d0c73e4c5d46f4"></script>
+  <script type="text/javascript" src="/meteor/packages/htmljs.js?02fcaaa6a72c008a5f618f8ec940eac2d240fc2c"></script>
+  <script type="text/javascript" src="/meteor/packages/observe-sequence.js?e0b5ec6321580efa20bf31f5a1ae4c52f05f38b5"></script>
+  <script type="text/javascript" src="/meteor/packages/reactive-var.js?b77e26d789bc6e0859202f67ea0934d68346450a"></script>
+  <script type="text/javascript" src="/meteor/packages/blaze.js?695c7798b7f4eebed3f8ce0cbb17c21748ff8ba8"></script>
+  <script type="text/javascript" src="/meteor/packages/accounts-base.js?7dabd814506e384c709f8bf707377955f9814129"></script>
+  <script type="text/javascript" src="/meteor/packages/sha.js?503aecb870fd958405ec64d77edc3f3400e11ef1"></script>
+  <script type="text/javascript" src="/meteor/packages/srp.js?2ec093a0246d9258d7662634cb38fb6e7a283413"></script>
+  <script type="text/javascript" src="/meteor/packages/accounts-password.js?8eae27e32c4d1bc1194f7c6dd2aaed1e33a88499"></script>
+  <script type="text/javascript" src="/meteor/packages/spacebars.js?3eafdd2d5d5d8f08431aa842df4b5e8142600b17"></script>
+  <script type="text/javascript" src="/meteor/packages/templating.js?d7be2bab3c1e28f0cd14c87f8d52857a34311d16"></script>
+  <script type="text/javascript" src="/meteor/packages/tmeasday_publish-counts.js?f9554ca2a94975e733097729e42109dc37224bd0"></script>
+  <script type="text/javascript" src="/meteor/packages/aldeed_simple-schema.js?3d6ebc811c555e8ab1ad73b249a995dc641334ed"></script>
+  <script type="text/javascript" src="/meteor/packages/aldeed_collection2.js?0e1a8fd75edeeb40b3ae5b365c9e75d0dc45d9a0"></script>
+  <script type="text/javascript" src="/meteor/packages/alanning_roles.js?8aa0b87363448fb9abcb9854eddfc5d850a1a752"></script>
+  <script type="text/javascript" src="/meteor/packages/ui.js?6aa94fb4743be2472f799f928674607edae2afdf"></script>
+  <script type="text/javascript" src="/meteor/packages/less.js?8d7e8cbf4562932bef6e158fb7a76c832c71b2b7"></script>
+  <script type="text/javascript" src="/meteor/packages/mdg_camera.js?665e565116c467ed9e035a5ffc7aa91eb2656f86"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_standard-packages.js?6b4c841e93153890376ded71a6dfb9eb77fb79ae"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_base-package.js?734ffa709eb4d3d0f25c681f57090c49461c4a1a"></script>
+  <script type="text/javascript" src="/meteor/packages/livedata.js?93f27626c1702ea8af804d6170ffbf8968626718"></script>
+  <script type="text/javascript" src="/meteor/packages/mongo-livedata.js?4ca4e1ff839e70bde61f820c1b823470b978e9f5"></script>
+  <script type="text/javascript" src="/meteor/packages/raix_eventemitter.js?9dbc8f21550d5b0e800bfa809850f28136f1deb6"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_storage-adapter.js?02c427ad446ea6977bff3062116b647aa84390e7"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_gridfs.js?8fb04a3a351e62568e937b7c5de88af3f81cca68"></script>
+  <script type="text/javascript" src="/meteor/packages/url.js?864ee208a94044db1a826d48600d22c150b368af"></script>
+  <script type="text/javascript" src="/meteor/packages/http.js?bbb7e492c5c1535078e3183f0980a565a3fbb0e6"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_data-man.js?b58db98eba98a6081763f645505dc664ad5b359c"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_file.js?246cf3116c9b9839564e22bd58f735e95bcbcb59"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_ui.js?0c0e5dfc5fb492c237ac865be7a5760c7fe05f0b"></script>
+  <script type="text/javascript" src="/meteor/packages/tus_client-connection.js?8e1fe0b7fa831ea904e29f76dfedd06d8799c2ca"></script>
+  <script type="text/javascript" src="/meteor/packages/webapp.js?1b9f36d855fc5c8399abf2579ac1e1512060cc95"></script>
+  <script type="text/javascript" src="/meteor/packages/hot-code-push.js?3916ae26c3ca4928e61dc2da7e7b3f93e4164c0c"></script>
+  <script type="text/javascript" src="/meteor/packages/launch-screen.js?bd3549f63c393378eba3c8a2aa55a2939397353f"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_tempstore.js?3a96ab9ffebfea2246ef069c15e2705971e58db0"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_http-methods.js?c6de42314b311cbe9a1a14413ab68387ec1b786b"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_http-publish.js?846d7a8ca6bf439df3f9ec850171024964b0cdee"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_access-point.js?73de3e52d10ddfa1867a9406ca16164644c00176"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_reactive-property.js?8cbc8f24ffc00e82389ad4c0b7c37f3d22e547bf"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_reactive-list.js?b1ebb7d4cbb92393a4e13c5442291b36bd0ebe6c"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_power-queue.js?c62bc29a130805fdc29f80982e4cb5ebc5467dea"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_upload-http.js?40a85d8630caaae705a0a84cc6989fc98fda8487"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_collection.js?60aba0a5a61bd74237ef18bbd254c4c42a4b3cbb"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_collection-filters.js?d566d0ba3fffd0dd05f318f1f9bb7c86174915a4"></script>
+  <script type="text/javascript" src="/meteor/packages/cfs_worker.js?2f893cd638bf7d36df99645706588a0af07c3791"></script>
+  <script type="text/javascript" src="/meteor/packages/autoupdate.js?764e166739a4aeba204926326b786baa4292b65d"></script>
+  <script type="text/javascript" src="/meteor/packages/global-imports.js?9f19846b831401c274feed17b329ab3eefa6ffb2"></script>
+  <script type="text/javascript" src="/meteor/app/lib/collections.js?25f9be89f874435388ef51ee09f31bb507d4df94"></script>
+  <script type="text/javascript" src="/meteor/packages/service-configuration.js?4d61180dfb83552a1feb13411378b94185aa2e1f"></script>
+  <script type="text/javascript" src="/meteor/packages/mdg_validation-error.js?b93a7ea6d6509dbb1e641ca71601f94c4354179d"></script>
+
+
+<!--meteor-config-end-->
+
+</head>
+
+<body><div id="root"></div></body>
+
+
+</html>
