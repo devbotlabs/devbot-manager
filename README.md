@@ -6,7 +6,7 @@
 The Idea is like this:
 
 We build our client app with webpack, which splitts the client code into different chunks
-based on the routes and one main file, which always gets served.
+based on the routes and one main file, which always gets served and knows about all the routes.
 
 We have Nginx, Meteor and Koa running. First request goes to nginx, which forwards to koa,
 which renders html like that:
