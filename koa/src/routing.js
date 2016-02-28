@@ -37,6 +37,8 @@ function baseLayout(params) {
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>Devbot Manager</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.js"></script>
+
 
     </head>
 
@@ -44,9 +46,13 @@ function baseLayout(params) {
         <div id="app">
         ${params.content}
         </div>
-
+        
+        
+            
 
            <script src="/public/__build__/main.js"></script>
+           
+           
     </body>
     </html>
 `}

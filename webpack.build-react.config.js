@@ -2,6 +2,25 @@ var fs = require('fs')
 var path = require('path')
 var webpack = require('webpack')
 
+const defaultOptions = {
+  development: argv.debug,
+  docs: false,
+  test: false,
+  optimize: argv.optimizeMinimize,
+  devServer: argv.devServer,
+  separateStylesheet: argv.separateStylesheet,
+  prerender: argv.prerender,
+};
+
+export default (options)=> {
+     const environment = options.test || options.development ? "development" : "production";
+  const babelLoader = "babel";
+  const reactLoader = options.development ? `react-hot!${babelLoader}` : babelLoader;
+    
+    
+    
+}
+
 module.exports = {
 
   //devtool: 'source-map',
@@ -17,7 +36,10 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.js$/, exclude: /node_modules/, loader: 'babel' }
+      { 
+          test: /\.(js|jsx)/,
+            loader: 'babel',
+        },
     ]
   },
 
@@ -30,6 +52,10 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
     })
-  ]
+  ],
+  resolve: {
+    // you can now require('file') instead of require('file.coffee')
+    extensions: ['', '.js','.jsx', '.coffee'] 
+  }
 
 }
