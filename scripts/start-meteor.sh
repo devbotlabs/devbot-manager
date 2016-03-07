@@ -2,7 +2,7 @@
 
 source scripts/config.cfg
 
-export DDP_DEFAULT_CONNECTION_URL=$DOCKER_IP/meteor
+export DDP_DEFAULT_CONNECTION_URL=$METEOR_HOST
 
 echo $DDP_DEFAULT_CONNECTION_URL
 cd meteor
